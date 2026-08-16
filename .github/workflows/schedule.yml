@@ -11,7 +11,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python
-      uses: actions/setup-python@v4
+    - uses: actions/checkout@v4
+      with:
+        repository: 2061360308/DouYinSparkFlow
+        ref: 68d17a30383c330de3346f0d7ab5dbe43e9aab35
       with:
         python-version: '3.11'
     - name: Test Douyin Accessibility
