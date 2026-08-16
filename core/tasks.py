@@ -80,6 +80,12 @@ def scroll_and_select_user(page, username, targets):
     logger.debug(f"账号 {username} 目标好友列表: {targets}")
 
     logger.debug(f"账号 {username} 点击进入好友标签页")
+
+    logger.debug(f"当前页面 URL: {page.url}")
+    logger.debug(f"当前页面标题: {page.title()}")
+    page.screenshot(path="logs/douyin_before_friends.png", full_page=True)
+    logger.debug(f"当前页面 HTML 长度: {len(page.content())}")
+
     # 点击好友标签页
     page.wait_for_selector(friends_tab_selector)
     page.locator(friends_tab_selector).click()
