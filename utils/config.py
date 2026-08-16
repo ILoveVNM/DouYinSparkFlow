@@ -4,7 +4,7 @@ import json
 import logging
 from utils.logger import setup_logger
 
-logger = setup_logger(level=logging.DEBUG)
+logger = setup_logger(level="Debug")
 
 """
 是否启用调试模式
